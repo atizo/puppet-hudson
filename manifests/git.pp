@@ -9,5 +9,6 @@ class hudson::git {
   file{"${hudson::home}/.ssh/config":
     content => 'StrictHostKeyChecking no',
     owner => hudson, group => hudson, mode => 0444;
+    require => Exec['hudson_ssh_keypair'],
   }
 }
