@@ -25,7 +25,6 @@ class hudson(
 ) {
   package{'hudson':
     ensure => present,
-    require => Yum::Repo['hudson'],
   }
   service{'hudson':
     ensure => running,
