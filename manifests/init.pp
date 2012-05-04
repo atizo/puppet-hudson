@@ -26,6 +26,7 @@ class hudson(
   yum::repo{'hudson':
     descr => 'Hudson',
     baseurl => 'http://pkg.jenkins-ci.org/redhat',
+    enabled => 1,
     gpgcheck => 0,
   }
   package{'hudson':
